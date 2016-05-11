@@ -126,45 +126,7 @@
   /* do not modify this code */
   (function(_w, __w, ___w, ____w, _____w, ______w, _______w) {'use strict';var w = _______w[_____w](____w);w.innerHTML = _w;w.id = __w;_______w[______w](___w).appendChild(w);}('Waldo', 'wenda', '.d', 'p', 'createElement', 'querySelector', document));
   </script>
-  <script>
-  /* TODO modify this code */
-  'use strict';
-
-  var findDatWaldo = function(node, funk) {
-
-    funk(node);
-    node = node.firstChild;
-    while (node) {
-
-      findDatWaldo(node, funk);
-      node = node.nextSibling;
-    }
-  };
-
-  findDatWaldo(document.head, function(node) {
-
-    if (typeof node.style !== 'undefined' && node.style) {
-
-      if (node.innerHTML.toLowerCase() === 'waldo') {
-
-        node.style.display = 'inline';
-        console.log(node.innerHTML);
-      }
-    }
-  });
-
-  findDatWaldo(document.body, function(node) {
-
-    if (typeof node.style !== 'undefined' && node.style) {
-
-      if (node.innerHTML.toLowerCase() === 'waldo') {
-
-        node.style.display = 'inline';
-        console.log(node.innerHTML);
-      }
-    }
-  });
-  </script>
+  <script src="findWaldo.js"></script>
 </body>
 
 </html>
